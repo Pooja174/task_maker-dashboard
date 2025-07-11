@@ -1,0 +1,353 @@
+<!-- ********************************************************************************************
+ *   COPYRIGHT (C) 2025 TASK MAKER
+ *   The reproduction, transmission or use of this document/file or its
+ *   contents is not permitted without  written authorization.
+ *   Offenders will be liable for damages. All rights reserved.
+ *---------------------------------------------------------------------------
+ *   Purpose:  index.html file
+ *   Project:  TASK MAKER dashboard
+ *   Tool:	   VS COde
+ ******************************************************************************************** -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TaskMaker Dashboard</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Hamburger icon to toggle sidebar visibility on smaller screens -->
+    <div
+      class="hamburger"
+      id="hamburger"
+      aria-label="Toggle sidebar"
+      role="button"
+      tabindex="0"
+    >
+      ☰
+    </div>
+    <!-- Main container holds sidebar, main content, and right sidebar -->
+    <div class="container">
+      <!-- Sidebar for navigation menu with logo and links -->
+      <aside class="sidebar" id="sidebar">
+        <div class="logo">
+          <img src="images/logo.png" alt="Logo" class="logo-img" />
+          Task<span class="highlight">Maker</span>
+        </div>
+
+        <nav class="nav">
+          <input
+            type="text"
+            placeholder="Search here..."
+            class="search-input"
+          />
+          <ul>
+            <li class="active"><i class="fas fa-home"></i> Dashboard</li>
+            <li><i class="fas fa-user"></i> Users</li>
+            <li><i class="fas fa-shield-alt"></i> Threats</li>
+            <li><i class="fas fa-building"></i> Company</li>
+            <li><i class="fas fa-lightbulb"></i> Awareness</li>
+            <li><i class="fas fa-chart-line"></i> My Progress</li>
+            <li><i class="fas fa-image"></i> Banners</li>
+            <li><i class="fas fa-cog"></i> Settings</li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Main content section including header, project cards, and schedule -->
+      <main class="main-content">
+        <!-- Header displays welcome message and current date -->
+        <header class="header">
+          <div>
+            <h1>Hello, UI Store</h1>
+            <p id="date-time"></p>
+          </div>
+
+          <div class="input-wrapper">
+            <span class="search-icon">&#128269;</span>
+            <input
+              type="text"
+              placeholder="Add New Project"
+              class="add-project"
+            />
+          </div>
+        </header>
+
+        <!-- Section for displaying project cards with task status and progress -->
+        <section class="cards">
+          <!-- Card 1 -->
+          <div class="card purple">
+            <div class="card-top">
+              <div class="avatars">
+                <span class="count">+7</span>
+                <img src="images/user1.png" alt="User 1" />
+                <img src="images/user2.png" alt="User 2" />
+                <img src="images/user3.png" alt="User 3" />
+              </div>
+              <div class="menu-dots">⋮</div>
+            </div>
+            <h2>
+              Website <br />
+              Development
+            </h2>
+            <p>08 tasks | 92%</p>
+            <div class="progress-bar">
+              <div class="progress" style="width: 92%"></div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="card pink">
+            <div class="card-top">
+              <div class="avatars">
+                <span class="count">+9</span>
+                <img src="images/user4.png" alt="User 1" />
+                <img src="images/user5.png" alt="User 2" />
+                <img src="images/user3.png" alt="User 3" />
+              </div>
+              <div class="menu-dots">⋮</div>
+            </div>
+            <h2>
+              UI/UX <br />
+              Design Learning
+            </h2>
+            <p>14 tasks | 56%</p>
+            <div class="progress-bar">
+              <div class="progress" style="width: 56%"></div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="card yellow">
+            <div class="card-top">
+              <div class="avatars">
+                <span class="count">+3</span>
+                <img src="images/user7.png" alt="User 1" />
+                <img src="images/user3.png" alt="User 2" />
+                <img src="images/user4.png" alt="User 3" />
+              </div>
+              <div class="menu-dots">⋮</div>
+            </div>
+            <h2>
+              Social Media <br />
+              Brand Marketing
+            </h2>
+            <p>03 tasks | 20%</p>
+            <div class="progress-bar">
+              <div class="progress" style="width: 20%"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Weekly schedule view showing tasks and events for each weekday -->
+        <section class="schedule">
+          <div class="schedule-header">
+            <h2>Schedule</h2>
+            <a href="#" class="full-schedule">Full schedule</a>
+          </div>
+
+          <div class="time-grid">
+            <div class="times">
+              <span>8:00</span>
+              <span>9:00</span>
+              <span>10:00</span>
+              <span>11:00</span>
+              <span>12:00</span>
+              <span>13:00</span>
+              <span>14:00</span>
+            </div>
+
+            <div class="schedule-rows">
+              <!-- Sunday -->
+              <div class="day-row">
+                <span class="day">Sun</span>
+                <div class="event purple" style="grid-column: 2 / span 4">
+                  <img src="images/user7.png" alt="User" />
+                  <div>
+                    <strong>Lesson 3</strong>
+                    <p>UX Research</p>
+                  </div>
+                  <div class="info">
+                    <span>Tasks: 4</span>
+                    <span>Hours: 16</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Monday -->
+              <div class="day-row">
+                <span class="day">Mon</span>
+                <div class="event green" style="grid-column: 2 / span 3">
+                  <img src="images/user4.png" alt="User" />
+                  <div>
+                    <strong>Analyst</strong>
+                  </div>
+                  <div class="info">
+                    <span>Tasks: 3</span>
+                    <span>Hours: 12</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tuesday -->
+              <div class="day-row">
+                <span class="day">Tue</span>
+                <div class="event pink" style="grid-column: 4 / span 3">
+                  <img src="images/user3.png" alt="User" />
+                  <div>
+                    <strong>Blender</strong>
+                  </div>
+                  <div class="info">
+                    <span>Tasks: 3</span>
+                    <span>Hours: 12</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Thursday -->
+              <div class="day-row">
+                <span class="day">Thu</span>
+                <div class="event orange" style="grid-column: 3 / span 3">
+                  <img src="images/user2.png" alt="User" />
+                  <div>
+                    <strong>UI Animation</strong>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Saturday -->
+              <div class="day-row">
+                <span class="day">Sat</span>
+                <div class="event blue" style="grid-column: 4 / span 3">
+                  <img src="images/user1.png" alt="User" />
+                  <div>
+                    <strong>Lesson 1</strong>
+                    <p>Graphic Design</p>
+                  </div>
+                  <div class="info">
+                    <span>Hours: 16</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Right sidebar showing overall progress, today’s tasks, and calendar -->
+      <aside class="right-panel">
+        <!-- Header for overall progress section -->
+        <div class="header">
+          <h3>Overall Progress</h3>
+          <i class="dots">...</i>
+        </div>
+
+        <!-- Circular progress chart and task information -->
+        <div class="progress-section">
+          <div class="plan-container">
+            <p class="title">Daily plan</p>
+            <div class="progress-chart">
+              <svg class="progress-ring" width="80" height="80">
+                <circle
+                  class="progress-ring__background"
+                  cx="40"
+                  cy="40"
+                  r="36"
+                />
+                <circle class="progress-ring__circle" cx="40" cy="40" r="36" />
+              </svg>
+              <div class="progress-ring__label">68%</div>
+            </div>
+
+            <div class="progress-text">
+              <p class="subtitle">5 completed<br /><span>from 8 Task</span></p>
+            </div>
+          </div>
+          <div class="task-info">
+            <div class="info-block">
+              <strong>13</strong>
+              <span>Tasks<br />finished</span>
+            </div>
+            <div class="info-block">
+              <strong>10</strong>
+              <span>Tracked<br />hours</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- List of tasks assigned for the current day -->
+        <div class="tasks-today">
+          <div class="title-row">
+            <h4>6 tasks today</h4>
+            <a href="#">view all</a>
+          </div>
+
+          <div class="task-card">
+            <div class="task-details">
+              <p class="title">Develop an idea for Amber website</p>
+              <span class="tag pink">PROTOTYPE</span>
+            </div>
+            <div class="user-info">
+              <img src="images/user1.png" alt="User 1" style="width: 20px" />
+              <span>Bill Jordan</span>
+            </div>
+          </div>
+
+          <div class="task-card">
+            <div class="task-details">
+              <p class="title">Structure the prototype logic for Bleam</p>
+              <span class="tag yellow">UX DESIGN</span>
+            </div>
+            <div class="user-info">
+              <img src="images/user3.png" alt="User 2" style="width: 20px" />
+              <span>July Macorn</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Static calendar section with time-based events -->
+        <div class="calendar">
+          <h4>Calendar</h4>
+
+          <div class="calendar-day">
+            <p class="calendar-date">Oct 20, 2022</p>
+
+            <div class="time-event">
+              <strong>10:00</strong>
+              <div class="event-details">
+                <span class="event-bar pink"></span>
+                <div>
+                  <p>Dribbble shot</p>
+                  <p class="subtext">Facebook Brand</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="time-event">
+              <strong>13:20</strong>
+              <div class="event-details">
+                <span class="event-bar yellow"></span>
+                <div>
+                  <p>Design</p>
+                  <p class="subtext">Task Management</p>
+                </div>
+              </div>
+            </div>
+
+            <p class="calendar-date">Oct 20, 2022</p>
+          </div>
+        </div>
+      </aside>
+    </div>
+    <!-- External scripts including jQuery and custom JavaScript -->
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
